@@ -64,7 +64,13 @@ autoCreateConnector:
     annotations: {}
     # The name of the service account to use.
     name: "wiz-auto-modify-connector"
-  
+  # The name of the service account to use for the create job
+  # defaults to .Values.autoCreateConnector.serviceAccount.name    
+  createJobServiceAccountName: ""    
+  # The name of the service account to use for the delete job
+  # defaults to .Values.autoCreateConnector.serviceAccount.name    
+  deleteJobServiceAccountName: ""
+
   podCustomEnvironmentVariables: [] # Additional environment variables to add to the components Pods as pairs “name”, “value”.
   podCustomEnvironmentVariablesFile: ""
   podAnnotations: {} # Annotations to add to the components Pods.
